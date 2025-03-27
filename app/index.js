@@ -1,20 +1,14 @@
-import {Text, View } from "react-native";
-import CustomButton from "../src/components/CustomButton";
-
+import { useEffect } from 'react';
+import { useRouter, useRootNavigationState } from 'expo-router';
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <CustomButton title="아이스 브레이킹" onPress={()=>{console.log("눌렸습니다.1")}}></CustomButton>
-      <CustomButton title="술게임" onPress={()=>{console.log("눌렸습니다.2")}}></CustomButton>
-    </View>
-    
-  );
+  const router = useRouter();
+  const navReady = useRootNavigationState();
+
+  useEffect(() => {
+    if (!navReady?.key) return; // 라우터 준비될 때까지 기다림
+    router.replace('/home');
+  }, [navReady]);
+
+  return null; // 로딩 중 화면도 가능
 }
