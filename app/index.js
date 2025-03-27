@@ -1,6 +1,6 @@
-import { Text, View } from "react-native";
-// import { Button } from "react-native";
-import Button from "../src/components/Button";
+import {Text, View } from "react-native";
+import CustomButton from "../src/components/CustomButton";
+
 
 export default function Index() {
   return (
@@ -12,8 +12,9 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Button title ="a"></Button>
+      <CustomButton title="아이스 브레이킹" onPress={()=>{console.log("눌렸습니다.1")}}></CustomButton>
+      <CustomButton title="술게임" onPress={()=>{console.log("눌렸습니다.2")}}></CustomButton>
     </View>
+    
   );
 }
-  
