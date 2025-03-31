@@ -39,6 +39,13 @@ You can start developing by editing the files inside the **app** directory. This
       git push origin main
    ```
 
+## branch 만들기
+   
+   ```bash
+      git fetch origin
+      git checkout NAME
+   ```
+
 ## 📁 디렉토리 구조
 ```perl
    MeetingHost/
