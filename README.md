@@ -36,11 +36,11 @@ You can start developing by editing the files inside the **app** directory. This
    ```bash
       git add .
       git commit -m "COMMENTS"
-      git push origin main
+      git push origin BRANCH
    ```
 
 ## branch 만들기
-   
+
    ```bash
       git fetch origin
       git checkout NAME
