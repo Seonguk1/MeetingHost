@@ -71,7 +71,7 @@ You can start developing by editing the files inside the **app** directory. This
 │   ├── components/            # 공통으로 사용되는 UI 컴포넌트
 │   │   └── Button.js          # 예: 재사용 가능한 버튼 컴포넌트
 │   │
-│   ├── store/                 # Zustand 등 상태 관리
+│   ├── stores/                 # Zustand 등 상태 관리
 │   │   └── useUserStore.js    # 사용자 정보 상태 관리 훅
 │   │
 │   ├── constants/             # 전역 상수 모음
