@@ -53,16 +53,19 @@ You can start developing by editing the files inside the **app** directory. This
 │   ├── (active)/              # 메인 앱 화면 그룹
 │   │   ├── home/
 │   │   │   └── index.js       # /home 진입점 → HomeScreen 렌더링
-│   │   ├── icebreaking/
-│   │   │   ├── index.js           # 아이스 브레이킹 메뉴
-│   │   │   ├── quiz.js            # 퀴즈 화면
-│   │   │   ├── balance.js         # 밸런스 게임
-│   │   │   └── result.js          # 아이스 브레이킹 결과 화면
-│   │   └── games/
-│   │       ├── index.js           # 술게임 메뉴
-│   │       ├── whisper.js         # 귓속말 게임
-│   │       ├── king.js            # 왕게임
-│   │       └── result.js          # 게임 결과 화면
+│   │   ├── iceBreakings/
+│   │   │   ├── index.js       # 아이스 브레이킹 메뉴
+│   │   │   ├── showTopics/    # 주제 제시하기
+│   │   │   ├── topicsWorldCup/# 주제 월드컵
+│   │   │   ├── liarGame/      # 라이어 게임
+│   │   │   └── result/        # 아이스 브레이킹 결과 화면
+│   │   └── drinkingGames/
+│   │       ├── index.js       # 술게임 메뉴
+│   │       ├── whisper        # 귓속말 게임
+│   │       ├── king/          # 왕게임
+│   │       ├── balance/       # 밸런스게임
+│   │       ├── quiz/          # 퀴즈 (인물 맞추기)
+│   │       └── result/        # 게임 결과 화면
 │   └── _layout.js             # 공통 레이아웃 구성 (ex. Stack, Tabs)
 │
 ├── src/                     ### 실제 기능 로직 및 컴포넌트들
@@ -72,13 +75,15 @@ You can start developing by editing the files inside the **app** directory. This
 │   │   │   ├── hooks/         # 홈 관련 커스텀 훅
 │   │   │   ├── utils/         # 홈 화면 관련 유틸 함수
 │   │   │   └── HomeScreen.js  # 홈 화면 UI 정의
-│   │   └── A-page/
+│   │   └── iceBreakings/
+│   │       └── ...            # 동일 구조
+│   │   └── drinkingGames/
 │   │       └── ...            # 동일 구조
 │   │
 │   ├── components/            # 공통으로 사용되는 UI 컴포넌트
 │   │   └── Button.js          # 예: 재사용 가능한 버튼 컴포넌트
 │   │
-│   ├── stores/                 # Zustand 등 상태 관리
+│   ├── stores/                # Zustand 등 상태 관리
 │   │   └── useUserStore.js    # 사용자 정보 상태 관리 훅
 │   │
 │   ├── constants/             # 전역 상수 모음
