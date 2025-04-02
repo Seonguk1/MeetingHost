@@ -1,7 +1,9 @@
 import {Text, View } from "react-native";
 import CustomButton from "../../components/CustomButton";
+import useNavigateHome from "./hooks/useNavigateHome";
 
 const HomeScreen = ()=>{
+  const {goToIceBreakingsMenu,goToDrinkingGamesMenu} = useNavigateHome();
   return (
     <View
       style={{
@@ -11,8 +13,8 @@ const HomeScreen = ()=>{
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
-      <CustomButton title="아이스 브레이킹" onPress={()=>{console.log("눌렸습니다.1")}}></CustomButton>
-      <CustomButton title="술게임" onPress={()=>{console.log("눌렸습니다.2")}}></CustomButton>
+      <CustomButton title="아이스 브레이킹" onPress={goToIceBreakingsMenu}></CustomButton>
+      <CustomButton title="술게임" onPress={()=>{goToDrinkingGamesMenu}}></CustomButton>
     </View>
   );
 }
