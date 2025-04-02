@@ -1,9 +1,10 @@
 import {Text, View, Button } from "react-native";
-import navigaeNextTopic from "./utils/navigateNextTopic";
+import navigateNextTopic from "./utils/navigateNextTopic";
 import { useState } from "react";
+import useUserStore from "../../../stores/useUserStore";
 
 const IBShowtopicsScreen = ()=>{
-  const [index, setIndex] = useState(0);
+  const {currentTopic} = useUserStore();
   return (
     <View
       style={{
@@ -12,15 +13,8 @@ const IBShowtopicsScreen = ()=>{
         alignItems: "center",
       }}
     >
-      <text></text>
-      <Button title="주제 보기" onPress={
-        
-        ()=>{
-          let newIndex = index;
-          newIndex++;
-          setIndex(newIndex)
-          navigaeNextTopic(index)}
-        }></Button>
+      <text> {currentTopic}</text>
+      <Button title="다음 주제 보기" onPress={navigateNextTopic}></Button>
     </View>
   );
 }
