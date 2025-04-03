@@ -1,9 +1,11 @@
-import { SafeAreaView, Text } from "react-native";
+import { Button, SafeAreaView, Text } from "react-native";
+import useNavigateIceBreakingsMenu from "./hooks/useNavigateIceBreakingsMenu";
 
 const IceBreakingsMenuScreen = ()=>{
+    const {goToLiarGame} = useNavigateIceBreakingsMenu();
     return(
         <SafeAreaView>
-            <Text> 메뉴</Text>
+            <Button title="라이어 게임" onPress={goToLiarGame}></Button>
         </SafeAreaView>
     )
 }
