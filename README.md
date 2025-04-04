@@ -25,6 +25,11 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## babel 플러그인 설치
+   ```bash
+      npm install --save-dev babel-plugin-module-resolver
+   ```
+- import할 때 모듈 경로 별칭 설정
 ## 작업 전
 
    ```bash

@@ -1,2 +1,2 @@
-import LiarGameScreen from "../../../../src/features/icebreaking/liarGame/LiarGameScreen";
+import LiarGameScreen from "../../../../src/features/iceBreakings/liarGame/LiarGameScreen";
 export default LiarGameScreen;

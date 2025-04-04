@@ -1,9 +1,9 @@
 import {Text, View, Button } from "react-native";
-import navigateNextTopic from "./utils/navigateNextTopic";
+import showNextTopic from "./utils/showNextTopic";
 import { useState } from "react";
 import useUserStore from "../../../stores/useUserStore";
 
-const IBShowtopicsScreen = ()=>{
+const TopicsSelectionScreen = ()=>{
   const {currentTopic} = useUserStore();
   return (
     <View
@@ -14,9 +14,9 @@ const IBShowtopicsScreen = ()=>{
       }}
     >
       <text> {currentTopic}</text>
-      <Button title="다음 주제 보기" onPress={navigateNextTopic}></Button>
+      <Button title="다음 주제 보기" onPress={showNextTopic}></Button>
     </View>
   );
 }
 
-export default IBShowtopicsScreen;
+export default TopicsSelectionScreen;
