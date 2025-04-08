@@ -35,7 +35,6 @@ You can start developing by editing the files inside the **app** directory. This
    ```bash
       git pull origin main
    ```
-
 ## 작업 후 
 
    ```bash

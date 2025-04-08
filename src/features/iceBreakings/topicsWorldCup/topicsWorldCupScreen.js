@@ -33,8 +33,8 @@ export default function TopicsWorldCupScreen() {
     <SafeAreaView style={styles.container}>
       <Text style={styles.maintitle}>이상형 월드컵</Text>
       <Text style={styles.title}>{getRoundLabel()}</Text>
-      <View style={styles.choicesContainer}>
-        <ChoiceCard name={left.name} image={left.image} onPress={() => handleSelect(left)} />
+      <View style={choicesContainer}>
+        <ChoiceCard namstylese={left.name} image={left.image} onPress={() => handleSelect(left)} />
         <Text style={styles.vsText}>VS</Text>
         <ChoiceCard name={right.name} image={right.image} onPress={() => handleSelect(right)} />
       </View>

@@ -1,2 +1,2 @@
-import TopicsWorldCupScreen from "../../../../src/features/iceBreakings/topicsWorldCup/TopicsWorldCupScreen"
+import TopicsWorldCupScreen from "@/features/iceBreakings/topicsWorldCup/TopicsWorldCupScreen"
 export default TopicsWorldCupScreen;
