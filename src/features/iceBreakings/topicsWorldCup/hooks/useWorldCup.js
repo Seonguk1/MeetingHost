@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Animated } from 'react-native';
-import shuffle from '../utils/shuffle';
+import shuffleArray from '@/utils/shuffleArray';
 import candidates from '../data/initialCandidates';
 
 export default function useWorldCup() {
   const [round, setRound] = useState(8);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [candidatesList, setCandidates] = useState(shuffle(candidates));
+  const [candidatesList, setCandidates] = useState(shuffleArray(candidates));
   const [nextRound, setNextRound] = useState([]);
   const [winner, setWinner] = useState(null);
 
@@ -24,7 +24,7 @@ export default function useWorldCup() {
 
   const resetGame = () => {
     setRound(8);
-    setCandidates(shuffle(candidates));
+    setCandidates(shuffleArray(candidates));
     setNextRound([]);
     setCurrentIdx(0);
     setWinner(null);
