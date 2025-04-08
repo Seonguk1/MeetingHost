@@ -1,45 +1,66 @@
-import { useEffect } from "react";
-import useUserStore from "../stores/useUserStore";
+import { useEffect, useRef } from "react";
+import useRouletteStore from "../stores/useRouletteStore";
+import topicsList from "../constants/topicsList";
 
-const useRoulettePicker = ()=>{
-    const {rouletteRef} = useUserStore();
+const useRoulettePicker = () => {
+    const { rouletteRef, itemHeight, isPressed, setSelectedItem, setResultItem } = useRouletteStore();
+    const intervalRef = useRef(null);
+    const currentIndex = useRef(0);
+    const itemList = topicsList;
 
-    let currentIndex = 200;
-    useEffect(()=>{
-        setInterval(()=>{
-            rouletteRef.current.scrollToIndex({
-                index: currentIndex,
-                animated: true,
-            });
-            currentIndex+=1;
-        }, 100)
-    }, [])
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
     const spin = () => {
-            let delay = 50;
-            const steps = 30;
-            const val = 1;
-            let currentIndex = centerIndex;
-            let count = 0;
-            
-            const spinStep = (step) => {
-                if (step > steps) return;
-        
-                rouletteRef.current.scrollToIndex({
-                    index: currentIndex + step * val,
-                    animated: true,
-                });
-        
-                console.log(`delay: ${delay}ms`);
-        
-                // 다음 회전 예약 (느려지게)
-                setTimeout(() => {
-                    delay += 15; // 점점 느려지게!
-                    spinStep(step + 1);
-                }, delay);
-            };
-            spinStep(0);
-        };
-}
+        clearInterval(intervalRef.current);
+        intervalRef.current = setInterval(() => {
+            rouletteRef.current.scrollToIndex({
+                index: currentIndex.current,
+                animated: true,
+            });
+            currentIndex.current += 1;
+            console.log(currentIndex.current)
+        }, 100);
+    };
+    
+    const easeOutScroll = async () => {
+        clearInterval(intervalRef.current);
+        for (let i = 10; i <= 22; i++) {
+            const easingDelay = i * i;
+            await delay(easingDelay);
+            rouletteRef.current.scrollToIndex({
+                index: currentIndex.current,
+                animated: true,
+            });
+            currentIndex.current += 1;
+        }
+
+        const result = itemList[(currentIndex.current + 1) % itemList?.length];
+        console.log(`🎯 최종 인덱스: ${currentIndex.current}, 결과: ${result}`);
+        setResultItem(result);
+    };
+
+    useEffect(() => {
+        if (!itemList?.length || !itemHeight) return;
+
+        if (isPressed) {
+            easeOutScroll();
+        } else {
+            spin();
+        }
+
+        return () => clearInterval(intervalRef.current);
+    }, [isPressed]);
+
+    const handleScrollEnd = (event) => {
+        if (!itemList?.length || !itemHeight) return;
+
+        const offsetY = event.nativeEvent.contentOffset.y;
+        const index = Math.round(offsetY / itemHeight);
+        const item = itemList[(index + 2) % itemList?.length];
+        setSelectedItem(item);
+    };
+
+    return { handleScrollEnd};
+};
 
 export default useRoulettePicker;
