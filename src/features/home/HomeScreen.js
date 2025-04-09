@@ -1,6 +1,7 @@
 import {Text, View } from "react-native";
 import CustomButton from "../../components/CustomButton";
 import useNavigateHome from "./hooks/useNavigateHome";
+import { Link } from "expo-router";
 
 const HomeScreen = ()=>{
   const {goToIceBreakingsMenu,goToDrinkingGamesMenu} = useNavigateHome();
@@ -14,7 +15,7 @@ const HomeScreen = ()=>{
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
       <CustomButton title="아이스 브레이킹" onPress={goToIceBreakingsMenu}></CustomButton>
-      <CustomButton title="술게임" onPress={()=>{goToDrinkingGamesMenu}}></CustomButton>
+      <CustomButton title="술게임" onPress={goToDrinkingGamesMenu}></CustomButton>
     </View>
   );
 }

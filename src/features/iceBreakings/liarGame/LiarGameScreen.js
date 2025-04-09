@@ -23,8 +23,6 @@ const LiarGameScreen = () => {
     };
 
     
-
-    
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ height: ITEM_HEIGHT * 5, overflow: 'hidden' }}>
