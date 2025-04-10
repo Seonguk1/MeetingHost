@@ -7,6 +7,6 @@ const baladCandidates = [
     { id: 6, name: "고백 - 델리스파이스" },
     { id: 7, name: "보고싶다 - 김범수" },
     { id: 8, name: "체념 - 빅마마" }
-  ];
+];
   
-  export default baladCandidates;
+export default baladCandidates;

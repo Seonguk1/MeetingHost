@@ -7,6 +7,6 @@ const kpopCandidates = [
     { id: 6, name: "BLACKPINK - 마지막처럼" },
     { id: 7, name: "Day6 - 예뻤어" },
     { id: 8, name: "BIGBANG - 봄여름가을겨울" }
-]
+];
 
 export default kpopCandidates;

@@ -7,6 +7,6 @@ const snackCandinates = [
     { id: 6, name: "에그타르트" },
     { id: 7, name: "케이크" },
     { id: 8, name: "과자" }
-  ];
+];
   
-  export default snackCandinates;
+export default snackCandinates;

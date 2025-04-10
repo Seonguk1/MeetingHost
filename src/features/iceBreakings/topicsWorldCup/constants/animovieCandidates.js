@@ -7,6 +7,6 @@ const animovieCandidates = [
     { id: 6, name: "귀멸의 칼날 무한열차편" },
     { id: 7, name: "스즈메의 문단속" },
     { id: 8, name: "더 퍼스트 슬램덩크" },
-]
+];
 
 export default animovieCandidates;

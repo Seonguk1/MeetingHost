@@ -7,6 +7,6 @@ const animalCandidates = [
     { id: 6, name: '하마' },
     { id: 7, name: '바다악어' },
     { id: 8, name: '코모도왕도마뱀' },
-  ];
-  
-  export default animalCandidates;
+];
+
+export default animalCandidates;

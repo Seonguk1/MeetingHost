@@ -7,6 +7,6 @@ const dramaCandidates = [
     { id: 6, name: "그 해 우리는" },
     { id: 7, name: "이태원 클라쓰" },
     { id: 8, name: "호텔델루나" },
-]
+];
 
 export default dramaCandidates;

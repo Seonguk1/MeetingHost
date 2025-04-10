@@ -7,6 +7,6 @@ const disneymovieCandidates = [
     { id: 6, name: "인사이드 아웃" },
     { id: 7, name: "토이 스토리" },
     { id: 8, name: "라푼젤" },
-]
+];
 
 export default disneymovieCandidates;

@@ -7,6 +7,6 @@ const webtoonCandidates = [
     { id: 6, name: '싸움독학' },
     { id: 7, name: '광장' },
     { id: 8, name: '이두나!' },
-]
+];
 
 export default webtoonCandidates;

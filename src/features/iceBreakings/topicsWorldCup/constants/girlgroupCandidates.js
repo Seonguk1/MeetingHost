@@ -7,6 +7,6 @@ const girlgroupCandidates = [
     { id: 6, name: "BLACKPINK - 마지막처럼" },
     { id: 7, name: "BLACKPINK - Lovesick Girls" },
     { id: 8, name: "TWICE - CHEER UP" }
-]
+];
 
 export default girlgroupCandidates;

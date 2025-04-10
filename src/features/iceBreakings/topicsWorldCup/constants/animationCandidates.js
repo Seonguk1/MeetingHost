@@ -7,6 +7,6 @@ const animationCandidates = [
     { id: 6, name: "짱구는 못말려" },
     { id: 7, name: "명탐정 코난" },
     { id: 8, name: "이누야사" },
-]
+];
 
 export default animationCandidates;

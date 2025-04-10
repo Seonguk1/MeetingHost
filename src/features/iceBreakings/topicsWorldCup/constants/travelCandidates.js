@@ -7,6 +7,6 @@ const travelCandidates = [
     { id: 6, name: '다낭' },
     { id: 7, name: '런던' },
     { id: 8, name: '바르셀로나' },
-  ];
+];
   
-  export default travelCandidates;
+export default travelCandidates;

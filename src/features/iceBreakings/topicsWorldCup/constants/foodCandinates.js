@@ -7,6 +7,6 @@ const foodCandinates = [
     { id: 6, name: '피자', image: require('../../../../assets/images/topicsWorldCupImages/pizza.jpeg') },
     { id: 7, name: '라면', image: require('../../../../assets/images/topicsWorldCupImages/naengmyeon.jpeg') },
     { id: 8, name: '떡볶이', image: require('../../../../assets/images/topicsWorldCupImages/tteokbokki.jpeg') },
-  ];
+];
   
-  export default foodCandinates;
+export default foodCandinates;

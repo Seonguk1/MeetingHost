@@ -7,6 +7,6 @@ const koreamovieCandidates = [
     { id: 6, name: '해리포터' },
     { id: 7, name: '극한직업' },
     { id: 8, name: '7번방의선물' },
-  ];
+];
   
-  export default koreamovieCandidates;
+export default koreamovieCandidates;
