@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, } from 'react';
 import { Animated } from 'react-native';
 import shuffleArray from '@/utils/shuffleArray';
-import candidates from '../data/initialCandidates';
+import candidates from '../constants/foodCandinates';
 
 export default function useWorldCup() {
   const [round, setRound] = useState(8);
